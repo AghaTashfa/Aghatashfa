@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agha Tashfa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            background: #f4f7fa;
+            padding: 20px;
+        }
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header"
+                "nav"
+                "content"
+                "footer";
+            max-width: 1200px;
+            margin: auto;
+            gap: 20px;
+        }
+        header {
+            grid-area: header;
+            background: #6c5ce7;
+            color: white;
+            padding: 25px;
+            font-size: 28px;
+            text-transform: uppercase;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            grid-area: nav;
+            background: #ffffff;
+            color: #2d3436;
+            padding: 20px;
+            font-size: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: background 0.3s ease-in-out;
+        }
+        nav:hover {
+            background: #dfe6e9;
+        }
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            gap: 20px;
+            padding: 20px;
+            min-height: 90vh; /* Increased the height of content section */
+        }
+        .sidebar {
+            background: #fdcb6e;
+            padding: 30px;
+            font-size: 18px;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .sidebar:hover {
+            transform: translateY(-10px);
+            background: #fab1a0;
+        }
+        .main-content {
+            background: linear-gradient(to right, #e17055, #fd79a8);
+            padding: 40px;
+            font-size: 24px;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .main-content:hover {
+            transform: translateY(-10px);
+            background: linear-gradient(to right, #e17055, #d63031);
+        }
+        footer {
+            grid-area: footer;
+            background: #6c5ce7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* New CSS Additions */
+        a {
+            color: #00cec9;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #0984e3;
+        }
+
+        button {
+            background-color: #00cec9;
+            color: white;
+            font-size: 16px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        button:hover {
+            background-color: #0984e3;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateX(-100%); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        .slide-in {
+            animation: slideIn 1s ease-out;
+        }
+        
+        /* Style for Highlighted Section */
+        .highlight {
+            background-color: #ffeaa7;
+            color: #2d3436;
+            font-size: 20px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .highlight:hover {
+            background-color: #fab1a0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="slide-in">Header</header>
+        <nav class="slide-in">Navigation Menu</nav>
+        <div class="content">
+            <aside class="sidebar slide-in">Sidebar Content</aside>
+            <section class="main-content slide-in">Main Content</section>
+            <aside class="sidebar slide-in">Sidebar Content</aside>
+        </div>
+        <footer class="slide-in">Footer</footer>
+    </div>
+    
+</body>
+</html>
